@@ -1,3 +1,9 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Load .env into environment
+
+
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
 import openai
@@ -6,8 +12,7 @@ from pydub import AudioSegment
 
 app = Flask(__name__)
 
-openai.api_key = "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"
-
+openai.api_key = os.getenv("OPENAI_API_KEY")
 def extract_intent(message):
     """Very basic fintech intent routing"""
     lowered = message.lower()
