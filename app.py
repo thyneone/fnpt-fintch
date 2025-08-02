@@ -48,8 +48,7 @@ def whatsapp():
     if intent == "balance":
         msg.body("Your current balance is UGX 234,000.")
     elif intent == "transfer":
-        msg.body("To transfer funds, please reply with:
-Send [amount] to [recipient name].")
+        msg.body("To transfer funds, please reply with:Send [amount] to [recipient name].")
     elif intent == "loan":
         msg.body("To apply for a loan, reply with the amount and purpose (e.g., 'Loan 50000 for school fees').")
     else:
